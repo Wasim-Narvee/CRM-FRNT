@@ -1,0 +1,73 @@
+/* Toolbar */
+.portal-toolbar {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  padding: 0 24px;
+  .portal-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #fff;
+  }
+}
+
+/* Page container */
+.page-container {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Action row */
+.action-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  .add-btn {
+    min-width: 140px;
+  }
+
+  .search-box {
+    width: 250px;
+    min-width: 200px;
+  }
+}
+
+/* Table wrapper */
+.table-wrapper {
+  overflow-x: auto;
+
+  table {
+    width: 100%;
+    min-width: 800px;
+
+    th.mat-header-cell {
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .header-icon {
+        font-size: 18px;
+        vertical-align: middle;
+      }
+    }
+
+    td.mat-cell {
+      padding: 12px 8px;
+    }
+
+    td.mat-cell button {
+      margin-right: 4px;
+    }
+  }
+}
+
+/* Paginator */
+mat-paginator {
+  margin-top: 16px;
+}

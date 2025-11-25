@@ -1,0 +1,58 @@
+<h2 mat-dialog-title>{{ isEditMode ? 'Edit Company' : 'Add New Company' }}</h2>
+
+<mat-dialog-content>
+  <form [formGroup]="customerForm" class="customer-form">
+
+    <div class="form-grid">
+
+      <!-- NAME -->
+      <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" />
+        <mat-error>{{ getErrorMessage('name') }}</mat-error>
+      </mat-form-field>
+
+      <!-- EMAIL -->
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" />
+        <mat-error>{{ getErrorMessage('email') }}</mat-error>
+      </mat-form-field>
+
+      <!-- PHONE NUMBER -->
+      <mat-form-field appearance="outline">
+        <mat-label>Phone Number</mat-label>
+        <input matInput formControlName="phoneNo" />
+        <mat-error>{{ getErrorMessage('phoneNo') }}</mat-error>
+      </mat-form-field>
+
+      <!-- COUNTRY -->
+      <mat-form-field appearance="outline">
+        <mat-label>Country</mat-label>
+        <input matInput formControlName="country" />
+        <mat-error>{{ getErrorMessage('country') }}</mat-error>
+      </mat-form-field>
+
+      <!-- ADDRESS -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Address</mat-label>
+        <textarea matInput formControlName="address"></textarea>
+        <mat-error>{{ getErrorMessage('address') }}</mat-error>
+      </mat-form-field>
+
+      <!-- WEBSITE URL -->
+      <mat-form-field appearance="outline">
+        <mat-label>Website URL</mat-label>
+        <input matInput formControlName="websiteUrl" placeholder="https://example.com" />
+        <mat-error>{{ getErrorMessage('websiteUrl') }}</mat-error>
+      </mat-form-field>
+
+    </div>
+
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="close()">Cancel</button>
+  <button mat-raised-button color="primary" (click)="save()">Save</button>
+</mat-dialog-actions>
